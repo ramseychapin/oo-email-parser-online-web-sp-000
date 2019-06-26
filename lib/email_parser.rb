@@ -14,7 +14,7 @@ class EmailParser
 
 
   def parse
-    resultEmail = emails.split(/[,?\s]/).uniq
+    resultEmail = emails.split(/[,?\s]/).uniq.delete("")
   end
 
 end

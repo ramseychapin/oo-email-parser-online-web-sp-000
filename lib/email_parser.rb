@@ -15,7 +15,6 @@ class EmailParser
 
   def parse
     puts resultEmail = emails.split(/\s*,\s*/).uniq
-
   end
 
 end

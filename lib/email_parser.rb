@@ -14,9 +14,7 @@ class EmailParser
 
 
   def parse
-    resultEmail = emails.split(/\s*,\s*/).uniq
-    resultEmail.reject { |address| address.empty? }
-    resultEmail.flatten
+    resultEmail = emails.split(/[,?\s]/).select{ |address| address != "" }.uniq
   end
 
 end

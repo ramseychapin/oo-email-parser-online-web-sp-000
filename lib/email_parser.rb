@@ -16,6 +16,7 @@ class EmailParser
   def parse
     resultEmail = emails.split(/\s*,\s*/).uniq
     resultEmail.reject { |address| address.empty? }
+    resultEmail.flatten
   end
 
 end
